@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background-color:var(--background-color);
+}
+
+:root{
+    --dark-green:#2B362D;
+    --main-color:#296647;
+    --text-color:#1E1E1E;
+    --base-color:#51AC37;
+    --red-color:#CD4343;
+    --background-color:#EEEEEE;
+    --light-tan:#E7E6DF;
+    --dark-tan:#D8D4C8;
+    
+
+    --heading-size: ;
+    --sub-heading-size: ;
+    --small-subheading-size: ;
+
+    --container-padding: 15px 10%;
+    --container-left-right-padding:10%;
+    
+}
+/* Css for navigation bar styling  */
+
+
+.hamburger{
+    display: none;
+}
+/* Container padding applies for all the containers ( whole site) */
+.container{
+    padding: var(--container-padding);
+}
+
+nav .section {
+    display: flex;
+}
+/* Section one margin/padding and colors */
+nav .section01{
+    justify-content: right;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height:30px;
+    background-color: var(--dark-green);
+    color: white;
+}
+nav .section01 .content{
+    margin-top: 4px;
+    padding-left: var(--container-left-right-padding);
+    padding-right: var(--container-left-right-padding);
+
+    float: left;
+}
+
+/* Section two margin/padding and colors */
+
+nav .section02{
+    display: flex;
+    justify-content: space-between;
+    margin-top:30px;
+}
+
+
+nav .section02 .logo span{
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 800;
+}
+.menu ul{
+    display: flex;
+}
+.menu ul li{
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 600;
+
+    
+}
+.menu ul li a:hover{
+    color: var(--base-color);
+}
+.menu ul li a{
+    transition: all .50s ease;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/*--Section 03---*/
+nav .section03{
+    background-color: white;
+    margin-top: 10px;
+    border: 2px solid var(--main-color);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .section03 form{
+    width:85%;
+    height: 45px;
+    display: flex;
+}
+nav .section03 form input{
+    flex: 1;
+    border: none;
+    outline: none;
+}
+nav .section03 form button{
+    position: relative;
+    right: -0.5px;
+    background-color: var(--base-color);
+    color: white;
+    padding: 0 50px;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600px;
+}
+nav .section03 form button .fa{
+    padding-left: 10px;
+    font-size: 15px;
+    
+}
+/* section 03 drop down list */
+
+nav .section03 .category span{
+    position: relative;
+    right: 2px;
+    border-radius: 32px;
+    padding: 13.2px 50px;
+    background-color: var(--dark-tan);
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+}
+nav .section03 .category .fa{
+    display: none;
+}
+nav .section03 .category ul li a{
+    text-decoration: none;
+    color: var(--main-color);
+    
+}
+nav .section03 .category ul li {
+    list-style-type: none;
+    
+}
+nav .section03 .category .dropdown li{
+    display: block;
+}
+.dropdown{
+    position: absolute;
+    background-color: var(--dark-tan);
+    border-radius: 32px;
+    top:145px;
+    width:250px;
+    z-index: 999; 
+    display: none;
+    padding: 20px 0px;
+    text-align: center;
+}
+.dropdown li{
+    margin-top: 10px;
+}
+
+nav .section03 .category span:hover{
+    background: var(--dark-tan);
+    /* color: white; */
+}
+nav .section03 .category:hover .dropdown{
+    display:block;
+    position: absolute;
+}
+
+
+
+
+
+@media only screen and (max-width:1320px){
+    
+   
+    nav .section03 form button span{
+        display: none;
+        
+    }
+   
+}
+
+@media only screen and (max-width:800px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        float: right;
+       
+        
+    }
+    nav .section01{
+        display: none;
+    }
+    
+    .menu{
+        height: 0px;
+        position: absolute;
+        top:35px;
+        left:0;
+        right:0;
+        width:100vw;
+        background-color: #332e2eef;
+        transition: all .50s ease;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .menu.active{
+        height:300px;
+    }
+    .menu ul{
+        display: block;
+        flex-direction: row;
+        width: fit-content; 
+        margin: 60px auto 0 auto;
+        text-align:center;
+        transition: all .50s ease;
+        opacity: 0;
+    }
+    .menu.active ul{
+        opacity: 1;
+    }
+    .menu ul li{
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+    nav .section03 .category .dropdown{
+        left:13%;
+        width: 250px;
+    }
+    nav .section03 .category span{
+        display: none;
+    }
+    nav .section03 .category .fa{
+        position: relative;
+        right: -15px;
+        top: -3px;
+        display: block;
+    }
+    
+    nav .section03 form button{
+        background: none;
+        right: 0;
+        left: 0;
+        padding: 0 20px;
+        
+       
+    }
+    nav .section03 form button .fa{
+        color: var(--text-color);
+    }
+}

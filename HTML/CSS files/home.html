@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="hero.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="hamburger">
+               <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+
+            <div class="section01 section">
+                <div class="content">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span class="signin">SignIn</span>
+                    <span>|</span>
+                    <span class="login">LogIn</span>
+                </div>
+            </div>
+            <div class="section02 section">
+                <div class="logo">
+                    <span>LOGO</span>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="icons">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+                
+
+                
+
+            </div>
+            <div class="section03 section">
+                    <div class="category">
+                        <ul>
+                            <li>
+                                <a href="#"><span clsss="category-txt">Category</span><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Category name</a></li>
+                                    <li><a href="#">Category name</a></li>
+                                    <li><a href="#">Category name</a></li>
+                                    <li><a href="#">Category name</a></li>
+                                    <li><a href="#">Category name</a></li>
+                                    <li><a href="#">Category name</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                   <form action="" class="search-bar">
+                        
+                        <input type="text" placeholder="What are you looking for?">
+                        <button type="submit"> <span>Search Here</span><i class="fa fa-search" aria-hidden="true"></i></button>
+                   </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <div class="text">
+                <div class="tag">
+                    <img src="">
+                    <span>Grocery Deliver Service</span>
+                </div>
+                <div class="heading">
+                    <h1>Discover <span>Fresh Flavour</span>&
+                    <span>Quality Items</span> at Your Fingerprints with GREEN</h1>
+                </div>
+                <div class="paragraph">
+                    <p>Fresh, flavorful choices await at GREEN.
+                    Elevate your meals with quality ingredients 
+                    and convenience. Explore today!</p>
+                </div>
+                <div class="btn">
+                    <a href="#"><span>Shop Now</span></a>
+                </div>
+            </div>
+            <div class="image">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        hamburger=document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+            navBar=document.querySelector(".menu");
+            navBar.classList.toggle("active");
+        }
+
+         
+        
+    </script>
+</body>
+</html>
